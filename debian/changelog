@@ -1,0 +1,7 @@
+qca2-plugin-ossl (0.1~20070706-1) experimental; urgency=low
+
+  * Initial release
+  * Closes: Bug#435693
+
+ -- Jan Niehusmann <jan@debian.org>  Mon, 06 Aug 2007 11:40:02 +0200
+
