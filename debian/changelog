@@ -1,3 +1,9 @@
+qca2-plugin-ossl (0.1~20070904-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Jan Niehusmann <jan@debian.org>  Sun, 07 Oct 2007 15:29:06 +0200
+
 qca2-plugin-ossl (0.1~20070706-1) experimental; urgency=low
 
   * Initial release

@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Jan Niehusmann <jan@debian.org>
-Build-Depends: cdbs, debhelper (>= 5), autotools-dev, libqca2-dev, libssl-dev
+Build-Depends: cdbs, debhelper (>= 5), autotools-dev, libqca2-dev (>=2.0.0), libssl-dev
 Standards-Version: 3.7.2
 
 Package: libqca2-plugin-ossl
