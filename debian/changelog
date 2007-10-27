@@ -1,3 +1,9 @@
+qca2-plugin-ossl (0.1~20070904-3) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Jan Niehusmann <jan@debian.org>  Sat, 27 Oct 2007 19:05:31 +0200
+
 qca2-plugin-ossl (0.1~20070904-2) experimental; urgency=low
 
   * Use qmake.mk instead of makefile.mk (Closes: Bug#445942)
