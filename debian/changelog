@@ -1,4 +1,4 @@
-qca2-plugin-ossl (2.0.0~beta3) unstable; urgency=low
+qca2-plugin-ossl (2.0.0~beta3) UNRELEASED; urgency=low
 
   * New upstream release.
   * Add Homepage: to control.
