@@ -1,25 +1,28 @@
 #!/usr/bin/make -f
   
 include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/qmake.mk
+include /usr/share/cdbs/1/rules/utils.mk
+include /usr/share/cdbs/1/class/makefile.mk
 
-DEB_MAKE_CLEAN_TARGET    = clean
-DEB_MAKE_BUILD_TARGET    = all
-DEB_MAKE_INSTALL_TARGET  = install INSTALL_ROOT=$(CURDIR)/debian/tmp/
-DEB_DH_INSTALL_SOURCEDIR = debian/tmp
-# no check for this software
-# DEB_MAKE_CHECK_TARGET   =
+# QMake targets
+DEB_MAKE_INSTALL_TARGET = install INSTALL_ROOT=$(DEB_DESTDIR)
+DEB_MAKE_CLEAN_TARGET = distclean
 
+# QConf breaks with CDBS default DEB_MAKE_INVOKE
+DEB_MAKE_INVOKE = $(DEB_MAKE_ENVVARS) make -C $(DEB_BUILDDIR)
+
+# QConf configure script rule derived from qmake.mk
+# DEB_BUILD_OPTIONS is not supported!
 common-configure-arch common-configure-indep:: common-configure-impl
-
 common-configure-impl:: $(DEB_BUILDDIR)/Makefile
-
 $(DEB_BUILDDIR)/Makefile:
-	cd $(DEB_BUILDDIR) && ./configure
+	cd $(DEB_BUILDDIR) && ./configure --qtdir=/usr/share/qt4
 
+# Clean up QConf
 clean::
-	rm -f $(DEB_BUILDDIR)/Makefile $(DEB_BUILDDIR)/.qmake.internal.cache
-	rm -f $(DEB_BUILDDIR)/lib/libqca-ossl.so*
-	rm -f $(DEB_BUILDDIR)/conf.log
-	rm -f $(DEB_BUILDDIR)/conf.pri
+	rm -rf conf.log conf.pri lib/
 
+
+# No debug for now
+binary-post-install/libqca2-plugin-ossl::
+	rm $(DEB_DESTDIR)/usr/lib/qt4/plugins/crypto/libqca-ossl.so.debug

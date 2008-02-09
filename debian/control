@@ -2,21 +2,17 @@ Source: qca2-plugin-ossl
 Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Jan Niehusmann <jan@debian.org>
-Build-Depends: cdbs, debhelper (>= 5), autotools-dev, libqca2-dev (>=2.0.0), libssl-dev
-Standards-Version: 3.7.2
+Uploaders: Jan Niehusmann <jan@debian.org>, Matthew Rosewarne <mrosewarne@inoutbox.com>
+Build-Depends: cdbs (>= 0.4.51), debhelper (>= 6), libqca2-dev (>=2.0.0), libssl-dev
+Standards-Version: 3.7.3
 Homepage: http://delta.affinix.com/qca/
 
 Package: libqca2-plugin-ossl
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: QCA OSSL plugin for libqca2
- This plugin provides features based on OpenSSL. It implements:
-  * Hashing - SHA1, SHA0, RIPEMD160, MD2, MD4, MD5
-  * Hashing - SHA224, SHA256, SHA384 and SHA512 (for openssl 0.9.8)
-  * Block Ciphers
-  * Keyed Hash Message Authentication Code (HMAC), using SHA1, MD5, RIPEMD160
-  * Public keys - RSA, DSA, Diffie-Hellman
-  * PKCS#12
-  * SSL/TLS
-  * CMS (for S/MIME)
+Description: SSL/TLS support for the Qt Cryptographic Architecture
+ The Qt Cryptographic Architecture provides a straightforward and cross-
+ platform API for a range of cryptographic features, including SSL/TLS,
+ X.509 certificates, SASL, OpenPGP, S/MIME CMS, and smart cards.
+ .
+ This plugin provides support for SSL and TLS using the OpenSSL library.
