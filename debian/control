@@ -11,7 +11,7 @@ Package: libqca2-plugin-ossl
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: SSL/TLS support for the Qt Cryptographic Architecture
- The Qt Cryptographic Architecture provides a straightforward and cross-
+ The Qt Cryptographic Architecture (QCA) provides a straightforward and cross-
  platform API for a range of cryptographic features, including SSL/TLS,
  X.509 certificates, SASL, OpenPGP, S/MIME CMS, and smart cards.
  .
