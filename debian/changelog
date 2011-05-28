@@ -1,3 +1,11 @@
+qca2-plugin-ossl (0.1~20070904-4) unstable; urgency=low
+
+  * Fix compilation with OpenSSL >= 0.9.8i (Closes: Bug#533970)
+    (Upstream patch downloaded from
+     http://websvn.kde.org/trunk/kdesupport/qca/plugins/qca-ossl/qca-ossl.cpp?r1=848615&r2=864423&view=patch)
+
+ -- Jan Niehusmann <jan@debian.org>  Sun, 21 Jun 2009 20:02:15 +0200
+
 qca2-plugin-ossl (0.1~20070904-3) unstable; urgency=low
 
   * Upload to unstable
