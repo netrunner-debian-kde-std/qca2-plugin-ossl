@@ -12,6 +12,8 @@ qca2-plugin-ossl (2.0.0~beta3-1) UNRELEASED; urgency=low
     - Turn changes from the last revision into a proper patch:
       remove_whirlpool_algo.diff
   * Switch debian/rules engine to dhmk.
+  * Enable support for MD2 only when available in OpenSSL. (Closes: #622017)
+    - Add detect_md2_available.diff
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 29 May 2011 23:15:26 +0200
 
