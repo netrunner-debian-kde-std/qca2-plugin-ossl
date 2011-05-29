@@ -9,7 +9,7 @@ include /usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk
 dh += --buildsystem=qmake
 
 override_dh_auto_configure:
-	./configure --verbose ---qtdir=/usr/share/qt4 --debug --no-separate-debug-info
+	./configure --verbose --qtdir=/usr/share/qt4 --debug --no-separate-debug-info
 	echo QMAKE_CFLAGS_DEBUG="$(CFLAGS)" >> conf.pri
 	echo QMAKE_CXXFLAGS_DEBUG="$(CXXFLAGS)" >> conf.pri
 	echo QMAKE_LDFLAGS_DEBUG="$(LDFLAGS)" >> conf.pri
