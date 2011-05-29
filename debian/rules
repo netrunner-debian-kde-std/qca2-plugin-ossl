@@ -16,3 +16,7 @@ override_dh_auto_configure:
 	echo QMAKE_LDFLAGS_DEBUG="$(LDFLAGS)" >> conf.pri
 	cat conf.pri.tmp >> conf.pri
 	rm conf.pri.tmp
+
+override_dh_clean:
+	$(overridden_command)
+	rm -rf conf.log conf.pri conf.pri.tmp lib/
