@@ -1,25 +1,15 @@
 #!/usr/bin/make -f
-  
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/qmake.mk
 
-DEB_MAKE_CLEAN_TARGET    = clean
-DEB_MAKE_BUILD_TARGET    = all
-DEB_MAKE_INSTALL_TARGET  = install INSTALL_ROOT=$(CURDIR)/debian/tmp/
-DEB_DH_INSTALL_SOURCEDIR = debian/tmp
-# no check for this software
-# DEB_MAKE_CHECK_TARGET   =
+CFLAGS := $(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS)
 
-common-configure-arch common-configure-indep:: common-configure-impl
+include /usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk
 
-common-configure-impl:: $(DEB_BUILDDIR)/Makefile
+dh += --buildsystem=qmake
 
-$(DEB_BUILDDIR)/Makefile:
-	cd $(DEB_BUILDDIR) && ./configure
-
-clean::
-	rm -f $(DEB_BUILDDIR)/Makefile $(DEB_BUILDDIR)/.qmake.internal.cache
-	rm -f $(DEB_BUILDDIR)/lib/libqca-ossl.so*
-	rm -f $(DEB_BUILDDIR)/conf.log
-	rm -f $(DEB_BUILDDIR)/conf.pri
-
+override_dh_auto_configure:
+	./configure --verbose ---qtdir=/usr/share/qt4 --debug --no-separate-debug-info
+	echo QMAKE_CFLAGS_DEBUG="$(CFLAGS)" >> conf.pri
+	echo QMAKE_CXXFLAGS_DEBUG="$(CXXFLAGS)" >> conf.pri
+	echo QMAKE_LDFLAGS_DEBUG="$(LDFLAGS)" >> conf.pri
