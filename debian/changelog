@@ -23,6 +23,7 @@ qca2-plugin-ossl (2.0.0~beta3-1) UNRELEASED; urgency=low
   * Bump Standards-Version to 3.9.2, no changes needed.
   * Add myself to uploaders.
   * Fix lintian warning copyright-with-old-dh-make-debian-copyright.
+  * Add Vcs-* fields.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 29 May 2011 23:15:26 +0200
 
