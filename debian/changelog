@@ -1,6 +1,7 @@
 qca2-plugin-ossl (2.0.0~beta3-1) UNRELEASED; urgency=low
 
   * New upstream release.
+    - Supports the pbkdf2(sha1) algorithm. (Closes: #514880; LP: #382691)
 
   [ Matthew Rosewarne ]
   * Tweak package description.
