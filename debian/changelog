@@ -2,6 +2,11 @@ qca2-plugin-ossl (2.0.0~beta3-1) UNRELEASED; urgency=low
 
   * New upstream release.
 
+  [ Matthew Rosewarne ]
+  * Tweak package description.
+  * Add Homepage: to control.
+  * Add watch file.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 29 May 2011 23:15:26 +0200
 
 qca2-plugin-ossl (0.1~20070904-4) unstable; urgency=low
