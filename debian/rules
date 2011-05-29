@@ -10,12 +10,10 @@ dh += --buildsystem=qmake
 
 override_dh_auto_configure:
 	./configure --verbose --qtdir=/usr/share/qt4 --debug --no-separate-debug-info
-	mv conf.pri conf.pri.tmp
 	echo QMAKE_CFLAGS_DEBUG="$(CFLAGS)" >> conf.pri
 	echo QMAKE_CXXFLAGS_DEBUG="$(CXXFLAGS)" >> conf.pri
 	echo QMAKE_LDFLAGS_DEBUG="$(LDFLAGS)" >> conf.pri
-	cat conf.pri.tmp >> conf.pri
-	rm conf.pri.tmp
+	qmake-qt4
 
 override_dh_clean:
 	$(overridden_command)
