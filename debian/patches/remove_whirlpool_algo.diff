@@ -1,6 +1,10 @@
---- qca2-plugin-ossl-0.1~20070904.orig/qca-ossl.cpp
-+++ qca2-plugin-ossl-0.1~20070904/qca-ossl.cpp
-@@ -6389,9 +6389,11 @@
+Description: remove whirlpool usage.  the algorithm is missing on at least
+ 0.9.8g and 0.9.8i, even though there's an OBJ_whirlpool definition in 0.9.8i.
+Origin: upstream, http://websvn.kde.org/?view=revision&revision=864423
+
+--- qca-ossl/qca-ossl.cpp
++++ qca-ossl/qca-ossl.cpp
+@@ -6616,9 +6616,11 @@
  #ifdef SHA512_DIGEST_LENGTH
  	list += "sha512";
  #endif
@@ -12,7 +16,7 @@
  	return list;
  }
  
-@@ -6600,10 +6602,12 @@
+@@ -6863,10 +6865,12 @@
  		else if ( type == "sha512" )
  			return new opensslHashContext( EVP_sha512(), this, type);
  #endif
