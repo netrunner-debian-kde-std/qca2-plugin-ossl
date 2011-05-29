@@ -16,6 +16,7 @@ qca2-plugin-ossl (2.0.0~beta3-1) UNRELEASED; urgency=low
     - Add detect_md2_available.diff
   * Enable support for SSL2 only when available in OpenSSL.
     - Add detect_ssl2_available.diff
+  * Don't install the TODO file.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 29 May 2011 23:15:26 +0200
 
