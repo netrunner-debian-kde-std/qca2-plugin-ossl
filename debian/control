@@ -7,8 +7,8 @@ Build-Depends: debhelper (>= 7.3.16), pkg-kde-tools (>= 0.12),
  libqca2-dev (>= 2.0.0), libssl-dev
 Standards-Version: 3.9.2
 Homepage: http://delta.affinix.com/qca/
-Vcs-Git: git://git.debian.org/pkg-kde/kde-std/qca2-plugin-ossl.git
-Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-std/qca2-plugin-ossl.git
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-std/qca2-plugin-ossl.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-std/qca2-plugin-ossl.git
 
 Package: libqca2-plugin-ossl
 Architecture: any
