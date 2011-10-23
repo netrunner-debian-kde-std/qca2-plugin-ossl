@@ -1,9 +1,5 @@
 #!/usr/bin/make -f
 
-CFLAGS := $(shell dpkg-buildflags --get CFLAGS)
-CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS)
-LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS)
-
 include /usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk
 
 dh += --buildsystem=qmake
