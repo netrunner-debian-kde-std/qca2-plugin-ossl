@@ -1,3 +1,4 @@
 remove_whirlpool_algo.diff
 detect_md2_available.diff
 detect_ssl2_available.diff
+backport_r820011_random_support.diff

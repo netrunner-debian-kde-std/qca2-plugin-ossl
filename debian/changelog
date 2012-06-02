@@ -7,6 +7,8 @@ qca2-plugin-ossl (2.0.0~beta3-2) UNRELEASED; urgency=low
   [ Modestas Vainius ]
   * Add myself to Uploaders.
   * Bump Standards-Version to 3.9.3: no changes needed.
+  * Backport random password generation support.
+    Patch: backport_r820011_random_support.diff
 
  -- Felix Geyer <debfx-pkg@fobos.de>  Sun, 23 Oct 2011 16:23:35 +0200
 
