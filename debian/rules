@@ -8,7 +8,7 @@ override_dh_auto_configure:
 	./configure --verbose --qtdir=/usr/share/qt4 --debug --no-separate-debug-info
 	echo QMAKE_CFLAGS_DEBUG="$(CFLAGS) $(CPPFLAGS)" >> conf.pri
 	echo QMAKE_CXXFLAGS_DEBUG="$(CXXFLAGS) $(CPPFLAGS)" >> conf.pri
-	echo QMAKE_LDFLAGS_DEBUG="$(LDFLAGS)" >> conf.pri
+	echo QMAKE_LFLAGS_DEBUG="$(LDFLAGS)" >> conf.pri
 	qmake-qt4
 
 override_dh_clean:
