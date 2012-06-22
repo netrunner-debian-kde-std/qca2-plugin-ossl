@@ -1,8 +1,10 @@
 qca2-plugin-ossl (2.0.0~beta3-2) UNRELEASED; urgency=low
 
+  [ Felix Geyer ]
   * Don't export build flags since pkg-kde-tools (and dpkg-buildpackage in
     the past) takes care of that.
   * Pass $CPPFLAGS and $LDFLAGS to the build system.
+  * Mark package as Multi-Arch: same and build-depend on libqt4-dev >= 4:4.8.0~.
 
   [ Modestas Vainius ]
   * Add myself to Uploaders.
