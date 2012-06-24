@@ -1,4 +1,6 @@
-qca2-plugin-ossl (2.0.0~beta3-2) UNRELEASED; urgency=low
+qca2-plugin-ossl (2.0.0~beta3-2) unstable; urgency=low
+
+  * Team upload.
 
   [ Felix Geyer ]
   * Don't export build flags since pkg-kde-tools (and dpkg-buildpackage in
@@ -12,7 +14,7 @@ qca2-plugin-ossl (2.0.0~beta3-2) UNRELEASED; urgency=low
   * Backport random password generation support.
     Patch: backport_r820011_random_support.diff
 
- -- Felix Geyer <debfx-pkg@fobos.de>  Sun, 23 Oct 2011 16:23:35 +0200
+ -- Modestas Vainius <modax@debian.org>  Sun, 24 Jun 2012 20:09:27 +0300
 
 qca2-plugin-ossl (2.0.0~beta3-1) unstable; urgency=low
 
